@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>GoNow - Travel & Tour Booking HTML Template</title>
+    <title>GoNow - {{ $title }}</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="clients/assets/images/logos/favicon.png" type="image/x-icon">
     <!-- Google Fonts -->
@@ -35,15 +35,21 @@
     <!-- Boxicons CSS -->
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    {{-- date time picker  --}}
+    <link rel="stylesheet" href="clients/assets/css/jquery.datetimepicker.min.css" />
+    {{-- custom css by Son --}}
+    <link rel="stylesheet" href="clients/assets/css/custom-css.css" />
+    <!-- Import CSS for Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 </head>
 
 <body>
     <div class="page-wrapper">
 
         <!-- Preloader -->
-        {{-- <div class="preloader">
+        <div class="preloader">
             <div class="custom-loader"></div>
-        </div> --}}
+        </div>
 
         <!-- main header -->
         <header class="main-header header-one white-menu menu-absolute">
@@ -53,8 +59,9 @@
 
                     <div class="header-inner rel d-flex align-items-center">
                         <div class="logo-outer">
-                            <div class="logo"><a href="{{ route('home') }}"><img src="clients/assets/images/logos/logo.png"
-                                        alt="Logo" title="Logo"></a></div>
+                            <div class="logo"><a href="{{ route('home') }}"><img
+                                        src="{{ asset('clients/assets/images/logos/logo.png') }}" alt="Logo"
+                                        title="Logo"></a></div>
                         </div>
 
                         <div class="nav-outer mx-lg-auto ps-xxl-5 clearfix">
@@ -63,10 +70,10 @@
                                 <div class="navbar-header">
                                     <div class="mobile-logo">
                                         <a href="{{ route('home') }}">
-                                            <img src="clients/assets/images/logos/logo.png" alt="Logo" title="Logo">
+                                            <img src="{{ asset('clients/assets/images/logos/logo.png') }}"
+                                                alt="Logo" title="Logo">
                                         </a>
                                     </div>
-
                                     <!-- Toggle Button -->
                                     <button type="button" class="navbar-toggle" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse">
@@ -78,17 +85,23 @@
 
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li class="current"><a href="{{ route('home') }}">Trang Chủ</a></li>
-                                        <li><a href="{{ route('about') }}">Giới Thiệu</a></li>
-                                        <li class="dropdown"><a href="#">Tours</a>
+                                        <li class="{{ Request::url() == route('home') ? 'active' : '' }}"><a
+                                                href="{{ route('home') }}">Trang Chủ</a></li>
+                                        <li class="{{ Request::url() == route('about') ? 'active' : '' }}"><a
+                                                href="{{ route('about') }}">Giới Thiệu</a></li>
+                                        <li
+                                            class="dropdown {{ Request::is('tours') || Request::is('tour-guides') || Request::is('tour-detail/*') ? 'active' : '' }}">
+                                            <a href="#">Tours</a>
                                             <ul>
-                                                <li><a href="{{ route('tours') }}">Tour</a></li>
+                                                <li><a href="{{ route('tours') }}">Tours</a></li>
                                                 <li><a href="{{ route('tour-guides') }}">Hướng dẫn viên</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('destination') }}">Điểm Đến</a></li>
-                                        <li><a href="{{ route('contact') }}">Liên Hệ</a></li>
-                                        <li><a href="{{ route('blog') }}">Blog</a></li>
+
+                                        <li class="{{ Request::url() == route('destination') ? 'active' : '' }}"><a
+                                                href="{{ route('destination') }}">Điểm Đến</a></li>
+                                        <li class="{{ Request::url() == route('contact') ? 'active' : '' }}"><a
+                                                href="{{ route('contact') }}">Liên Hệ</a></li>
                                     </ul>
                                 </div>
 
@@ -114,7 +127,9 @@
                             <!-- menu sidbar -->
                             <div class="menu-sidebar">
                                 <button class="bg-transparent">
-                                    <i class="bxr  bxs-user" style="font-size: xx-large;"></i>
+                                   <a href="{{ route('login') }}">
+                                        <i class="bxr  bxs-user" style="font-size: xx-large; color: white;"></i>
+                                    </a>
                                 </button>
                             </div>
                         </div>

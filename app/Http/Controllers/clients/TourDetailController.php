@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\clients;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class TourDetailController extends Controller
@@ -10,9 +11,10 @@ class TourDetailController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id='')
     {
-        return view('clients.tour-detail', ['title' => 'Tour Detail']);
+        $title = 'Chi Tiết Tour' .$id;
+        return view('clients.tour-detail', compact('title'));
     }
 
     /**

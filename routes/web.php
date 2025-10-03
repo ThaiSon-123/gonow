@@ -21,7 +21,7 @@ Route::get('/tours', [ToursController::class, 'index'])->name('tours');
 Route::get('/tour-guides', [TourGuidesController::class, 'index'])->name('tour-guides');
 Route::get('/destination', [DestinationController::class, 'index'])->name('destination');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-Route::get('/tour-detail', [TourDetailController::class, 'index'])->name('tour-detail');
+Route::get('/tour-detail/{id?}', [TourDetailController::class, 'index'])->name('tour-detail');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog-detail', [BlogDetailController::class, 'index'])->name('blog-detail');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
