@@ -17,21 +17,21 @@
         rel="stylesheet">
 
     <!-- Flaticon -->
-    <link rel="stylesheet" href="clients/assets/css/flaticon.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/flaticon.min.css') }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="clients/assets/css/fontawesome-5.14.0.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/fontawesome-5.14.0.min.css') }}">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="clients/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/bootstrap.min.css') }}">
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="clients/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/magnific-popup.min.css') }}">
     <!-- Nice Select -->
-    <link rel="stylesheet" href="clients/assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/nice-select.min.css') }}">
     <!-- Animate -->
-    <link rel="stylesheet" href="clients/assets/css/aos.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/aos.css') }}">
     <!-- Slick -->
-    <link rel="stylesheet" href="clients/assets/css/slick.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/slick.min.css') }}">
     <!-- Main Style -->
-    <link rel="stylesheet" href="clients/assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/style.css') }}">
     <!-- Boxicons CSS -->
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 </head>
 
-<body>
+<body class="home">
     <div class="page-wrapper">
 
         <!-- Preloader -->
@@ -126,13 +126,18 @@
                             </a>
                             <!-- menu sidbar -->
                             <div class="menu-sidebar">
-                                <button class="bg-transparent">
-                                   <a href="{{ route('login') }}">
-                                        <i class="bxr  bxs-user" style="font-size: xx-large; color: white;"></i>
-                                    </a>
-                                </button>
+                                <li class="drop-down">
+                                    <button class="dropdown-toggle bg-transparent" id="userDropdown">
+                                        <i class='bx bxs-user bx-tada' style="font-size: 36px; color: white;"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" id="dropdownMenu">
+                                        <li><a href="#">Thông tin cá nhân</a></li>
+                                        <li><a href="#">Tour đã đặt</a></li>
+                                        <li><a href="#">Đăng xuất</a></li>
+                                        <li><a href="{{ route('login') }}">Đăng nhập</a></li>
+                                    </ul>
+                                </li>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

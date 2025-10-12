@@ -7,17 +7,17 @@
                 <div class="col-xl-5 col-lg-6" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
                     <div class="footer-widget footer-text">
                         <div class="footer-logo mb-25">
-                            <a href="index.html"><img src="{{ asset('clients/assets/images/logos/logo.png') }}"
+                            <a href="{{ route('home') }}"><img src="{{ asset('clients/assets/images/logos/logo.png') }}"
                                     alt="Logo"></a>
                         </div>
                         <p>Chúng tôi biên soạn các hành trình riêng biệt phù hợp với sở thích của bạn, đảm bảo mọi
                             chuyến đi đều
                             liền mạch và làm phong phú thêm những viên ngọc ẩn giấu</p>
                         <div class="social-style-one mt-15">
-                            <a href="https://www.facebook.com/dienne.dev"><i class="fab fa-facebook-f"></i></a>
-                            <a href="contact.html"><i class="fab fa-youtube"></i></a>
-                            <a href="contact.html"><i class="fab fa-pinterest"></i></a>
-                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/sonvo.2201"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                             nghiệm phổ biến nhất mà bạn sẽ nhớ</p>
                     </div>
                     <form class="newsletter-form mb-50" action="#">
-                        <input id="news-email" type="email" placeholder="Email Address" required>
+                        <input id="news-email" type="email" placeholder="Email của bạn" required>
                         <button type="submit" class="theme-btn bgc-secondary style-two">
                             <span data-hover="Đăng ký">Đăng ký</span>
                             <i class="fal fa-arrow-right"></i>
@@ -116,7 +116,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="copyright-text text-center text-lg-start">
-                        <p>@Copy 2024 <a href="{{ route('home') }}">Travela</a>, All rights reserved</p>
+                        <p>@Copy 2025 <a href="{{ route('home') }}">GoNow</a>, All rights reserved</p>
                     </div>
                 </div>
                 <div class="col-lg-7 text-center text-lg-end">

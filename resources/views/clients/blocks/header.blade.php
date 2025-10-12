@@ -18,21 +18,21 @@
         rel="stylesheet">
 
     <!-- Flaticon -->
-    <link rel="stylesheet" href="clients/assets/css/flaticon.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/flaticon.min.css') }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="clients/assets/css/fontawesome-5.14.0.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/fontawesome-5.14.0.min.css') }}">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="clients/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/bootstrap.min.css') }}">
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="clients/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/magnific-popup.min.css') }}">
     <!-- Nice Select -->
-    <link rel="stylesheet" href="clients/assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/nice-select.min.css') }}">
     <!-- Animate -->
-    <link rel="stylesheet" href="clients/assets/css/aos.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/aos.css') }}">
     <!-- Slick -->
-    <link rel="stylesheet" href="clients/assets/css/slick.min.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/slick.min.css') }}">
     <!-- Main Style -->
-    <link rel="stylesheet" href="clients/assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/style.css') }}">
     <!-- Boxicons CSS -->
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
@@ -44,7 +44,8 @@
     <link rel="stylesheet" href="{{ asset('clients/assets/css/css-login/style.css') }}">
     {{-- custom css by Son --}}
     <link rel="stylesheet" href="{{ asset('clients/assets/css/custom-css.css') }}" />
-
+    {{-- date time picker  --}}
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/jquery.datetimepicker.min.css') }}" />
     {{-- User Profile  --}}
     <link rel="stylesheet" href="{{ asset('clients/assets/css/user-profile.css') }}" />
 

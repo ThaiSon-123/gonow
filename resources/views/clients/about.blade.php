@@ -33,7 +33,7 @@
                                 <li>Du lịch chi phí thấp</li>
                                 <li>Hỗ trợ trực tuyến 24/7</li>
                             </ul>
-                            <a href="about.html" class="theme-btn style-three mt-30">
+                            <a href="{{ route('tours') }}" class="theme-btn style-three mt-30">
                                 <span data-hover="Explore Tours">Khám Phá Các Tour</span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
@@ -68,7 +68,7 @@
                     <div class="feature-item style-three bgc-secondary">
                         <div class="icon-title">
                             <div class="icon"><i class="flaticon-award-symbol"></i></div>
-                            <h5><a href="destination-details.html">Chúng tôi là công ty đạt giải thưởng</a></h5>
+                            <h5><a href="{{ route('destination') }}">Chúng tôi là công ty đạt giải thưởng</a></h5>
                         </div>
                         <div class="content">
                             <p>Tại Pinnacle Business Solutions, cam kết về sự xuất sắc và đổi mới đã mang lại</p>
@@ -77,7 +77,7 @@
                     <div class="feature-item style-three bgc-primary">
                         <div class="icon-title">
                             <div class="icon"><i class="flaticon-tourism"></i></div>
-                            <h5><a href="destination-details.html">5000+ Điểm đến du lịch phổ biến</a></h5>
+                            <h5><a href="{{ route('destination') }}">5000+ Điểm đến du lịch phổ biến</a></h5>
                         </div>
                         <div class="content">
                             <p>Đội ngũ chuyên gia của chúng tôi tận tâm phát triển các chiến lược tiên tiến để thúc đẩy thành công</p>
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="destination-details.html" class="theme-btn mt-10 style-two">
+                    <a href="{{ route('destination') }}" class="theme-btn mt-10 style-two">
                         <span data-hover="Explore Destinations">Khám Phá Các Điểm Đến</span>
                         <i class="fal fa-arrow-right"></i>
                     </a>
@@ -154,10 +154,10 @@
                         <h6>John L. Simmons</h6>
                         <span class="designation">Co-founder</span>
                         <div class="social-style-one inner-content">
-                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
-                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
                         </div>
                     </div>
                 </div>
@@ -170,10 +170,10 @@
                         <h6>Andrew K. Manley</h6>
                         <span class="designation">Senior Guide</span>
                         <div class="social-style-one inner-content">
-                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
-                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
                         </div>
                     </div>
                 </div>
@@ -186,10 +186,10 @@
                         <h6>Drew J. Bridges</h6>
                         <span class="designation">Travel Guide</span>
                         <div class="social-style-one inner-content">
-                            <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
-                            <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
                         </div>
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                 <div class="feature-item style-two">
                     <div class="icon"><i class="flaticon-save-money"></i></div>
                     <div class="content">
-                        <h5><a href="destination-details.html">Đảm bảo giá tốt nhất</a></h5>
+                        <h5><a href="{{ route('tours') }}">Đảm bảo giá tốt nhất</a></h5>
                         <p>Cam kết giá ưu đãi nhất, giúp bạn tiết kiệm tối đa chi phí du lịch.</p>
                     </div>
                 </div>
@@ -224,7 +224,7 @@
                 <div class="feature-item style-two">
                     <div class="icon"><i class="flaticon-travel-1"></i></div>
                     <div class="content">
-                        <h5><a href="destination-details.html">Điểm đến đa dạng</a></h5>
+                        <h5><a href="{{ route('destination') }}">Điểm đến đa dạng</a></h5>
                         <p>Hàng nghìn điểm đến hấp dẫn, phù hợp mọi sở thích và phong cách du lịch.</p>
                     </div>
                 </div>
@@ -234,7 +234,7 @@
                 <div class="feature-item style-two">
                     <div class="icon"><i class="flaticon-booking"></i></div>
                     <div class="content">
-                        <h5><a href="destination-details.html">Đặt chỗ nhanh</a></h5>
+                        <h5><a href="{{ route('destination') }}">Đặt chỗ nhanh</a></h5>
                         <p>Quy trình đặt chỗ đơn giản, nhanh chóng, đảm bảo chuyến đi suôn sẻ.</p>
                     </div>
                 </div>
@@ -244,7 +244,7 @@
                 <div class="feature-item style-two">
                     <div class="icon"><i class="flaticon-guidepost"></i></div>
                     <div class="content">
-                        <h5><a href="destination-details.html">Hướng dẫn du lịch tốt</a></h5>
+                        <h5><a href="{{ route('tour-guides') }}">Hướng dẫn du lịch tốt</a></h5>
                         <p>Đội ngũ hướng dẫn tận tâm, giàu kinh nghiệm, đồng hành cùng bạn mọi hành trình.</p>
                     </div>
                 </div>
@@ -262,8 +262,8 @@
 <div class="video-area pt-25 rel z-1">
     <div class="container">
         <div class="video-wrap" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="50">
-            <img src="clients/assets/images/video/video-bg.jpg" alt="Video">
-            <a href="https://www.youtube.com/watch?v=9Y7ma241N8k" class="mfp-iframe video-play" tabindex="-1"><i
+            <img src="clients/assets/images/video/video-bg.png" alt="Video">
+            <a href="https://www.youtube.com/watch?v=04Kf_0kppPM" class="mfp-iframe video-play" tabindex="-1"><i
                     class="fas fa-play"></i></a>
         </div>
     </div>
