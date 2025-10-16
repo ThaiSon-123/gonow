@@ -358,6 +358,45 @@
     text-overflow: ellipsis; /* Display "..." if text overflows */
     white-space: nowrap;
 }
+/* TimeLine */
+.timeline-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+.timeline-description p {
+    margin-bottom: 1rem;
+    text-indent: 1.5em; /* thụt đầu dòng */
+}
+
+.timeline-description ul {
+    list-style-type: disc;
+    margin-left: 2.5rem; /* thụt cả danh sách */
+    margin-bottom: 1rem;
+}
+
+.timeline-description li {
+    margin-bottom: 0.5rem;
+}
+
+.timeline-description b, 
+.timeline-description strong {
+    color: #007bff;
+}
+
+.timeline-description em {
+    color: #555;
+    font-style: italic;
+}
+
+.timeline-description .option {
+    margin-left: 1.5rem; /* thụt thêm cho từng lựa chọn */
+    padding-left: 1rem;
+    border-left: 3px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+}
 
 /****************************************
 *             HANDLE SEARCH            *

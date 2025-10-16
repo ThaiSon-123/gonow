@@ -26,19 +26,21 @@
     <link rel="stylesheet" href="{{ asset('clients/assets/css/magnific-popup.min.css') }}">
     <!-- Nice Select -->
     <link rel="stylesheet" href="{{ asset('clients/assets/css/nice-select.min.css') }}">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/jquery-ui.min.css') }}">
     <!-- Animate -->
     <link rel="stylesheet" href="{{ asset('clients/assets/css/aos.css') }}">
     <!-- Slick -->
     <link rel="stylesheet" href="{{ asset('clients/assets/css/slick.min.css') }}">
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('clients/assets/css/style.css') }}">
-    <!-- Boxicons CSS -->
-    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+
+    {{-- boxicons --}}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     {{-- date time picker  --}}
-    <link rel="stylesheet" href="clients/assets/css/jquery.datetimepicker.min.css" />
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/jquery.datetimepicker.min.css') }}" />
     {{-- custom css by Son --}}
-    <link rel="stylesheet" href="clients/assets/css/custom-css.css" />
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/custom-css.css') }}" />
     <!-- Import CSS for Toastr -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 </head>
@@ -131,10 +133,13 @@
                                         <i class='bx bxs-user bx-tada' style="font-size: 36px; color: white;"></i>
                                     </button>
                                     <ul class="dropdown-menu" id="dropdownMenu">
-                                        <li><a href="#">Thông tin cá nhân</a></li>
-                                        <li><a href="#">Tour đã đặt</a></li>
-                                        <li><a href="#">Đăng xuất</a></li>
-                                        <li><a href="{{ route('login') }}">Đăng nhập</a></li>
+                                        @if (session()->has('username'))
+                                            <li><a href="#">Thông tin cá nhân</a></li>
+                                            <li><a href="#">Tour đã đặt</a></li>
+                                            <li><a href="{{ route('logout') }}">Đăng xuất</a></li>
+                                        @else
+                                            <li><a href="{{ route('login') }}">Đăng nhập</a></li>
+                                        @endif
                                     </ul>
                                 </li>
                             </div>

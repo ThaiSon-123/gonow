@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*----------------------------------------------------------------------
-    Template Name: Ravelo - Travel & Tour Booking HTML Template
-    Template URI: https://webtend.net/demo/html/ravelo/
+    Template Name: GoNow - Travel & Tour Booking HTML Template
+    Template URI: https://webtend.net/demo/html/gonow/
     Author: WebTend
     Author URI:  https://webtend.net/
     Version: 1.0
@@ -4460,6 +4460,9 @@ h6, .h6, blockquote {
 /*******************************************************/
 /**************** ## Destinations Area ****************/
 /*******************************************************/
+.title-tour{
+  height: 85px;
+}
 .destination-item {
   color: #92A498;
   margin-bottom: 30px;
@@ -4472,6 +4475,7 @@ h6, .h6, blockquote {
     position: relative;
     border-radius: 10px; }
     .destination-item .image img {
+      height: 250px;
       width: 100%;
       -webkit-transition: 0.5s;
       -o-transition: 0.5s;
@@ -4717,8 +4721,9 @@ h6, .h6, blockquote {
         -ms-flex-align: center;
         align-items: center; }
         .destination-item.style-three.bgc-lighter .content .destination-header .location {
-          margin-right: 20px;
-          margin-bottom: 5px; }
+          margin-right: 15px;
+          margin-bottom: 5px;
+          margin-top: 5px; }
         .destination-item.style-three.bgc-lighter .content .destination-header .ratting {
           padding: 5px 10px;
           background: white;

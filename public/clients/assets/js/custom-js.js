@@ -193,7 +193,7 @@ $(document).ready(function () {
     $("#sorting_tours").on("change", function () {
         filterTours(null, null);
     });
-
+    
     function filterTours(minPrice = null, maxPrice = null) {
         $(".loader").show();
         $("#tours-container").addClass("hidden-content");
@@ -270,7 +270,7 @@ $(document).ready(function () {
         $('input[name="filter_star"]').prop("checked", false);
         $('input[name="duration"]').prop("checked", false);
 
-        
+        filterTours(0, 20000000);
         var url = $(this).attr("href");
 
         $.ajax({

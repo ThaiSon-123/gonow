@@ -154,7 +154,7 @@
                     </div>
                     <div class="circle-logo">
                         <img src="{{ asset('clients/assets/images/contact/icon.png') }}" alt="Logo">
-                        <span class="title h2">Travela</span>
+                        <span class="title h2">GoNow</span>
                     </div>
                 </div>
             </div>

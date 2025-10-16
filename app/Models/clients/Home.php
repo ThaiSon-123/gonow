@@ -23,11 +23,6 @@ class Home extends Model
             $tour->images = DB::table('tbl_images')
                 ->where('tourId', $tour->tourId)
                 ->pluck('imageUrl');
-
-            // Lấy danh sách timeline thuộc về tour
-            // $tour->timeline = DB::table('tbl_timeline')
-            //     ->where('tourId', $tour->tourId)
-            //     ->pluck('title');
         }
 
         return $tours;

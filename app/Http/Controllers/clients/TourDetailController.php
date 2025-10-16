@@ -21,7 +21,7 @@ class TourDetailController extends Controller
     {
         $title = 'Chi Tiết Tour';
         $tourDetail = $this->tours->getTourDetail($id);
-        //dd($tourDetail);
+        //dd($tourDetail->timeline);
         return view('clients.tour-detail', compact('title','tourDetail'));
 
     }
