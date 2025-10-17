@@ -73,10 +73,11 @@ class LoginController extends Controller
         $user = $this->login->getUserByToken($token);
         if ($user) {
             $this->login->activateUserAccount($token);
-
-            return redirect('/login')->with('message', 'Tài khoản của bạn đã được kích hoạt!');
+            toastr()->success('Tài khoản của bạn đã được kích hoạt!', ['title' => 'Thành công']);
+            return redirect('/login');
         } else {
-            return redirect('/login')->with('error', 'Mã kích hoạt không hợp lệ!');
+            toastr()->error('Mã kích hoạt không hợp lệ!', ['title' => 'Lỗi']);
+            return redirect('/login');
         }
     }
     //Xử lý người dùng đăng nhập
@@ -97,7 +98,8 @@ class LoginController extends Controller
         if ($user_login != null) {
             $request->session()->put('username', $username);
             $request->session()->put('avatar', $user->avatar);
-            //toastr()->success("Đăng nhập thành công!",'Thông báo');
+            $request->session()->save();
+            toastr()->success('Đăng nhập thành công', ['title' => 'Thành công']);
             return response()->json([
                 'success' => true,
                 'message' => 'Đăng nhập thành công!',
@@ -119,7 +121,7 @@ class LoginController extends Controller
         $request->session()->forget('username');
         $request->session()->forget('avatar');
         $request->session()->forget('userId');
-        //toastr()->success("Đăng xuất thành công!",'Thông báo');
+        toastr()->success('Đăng xuất thành công', ['title' => 'Thành công']);
         return redirect()->route('home');
     }
 }

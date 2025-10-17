@@ -30,6 +30,7 @@ class LoginGoogleController extends Controller
             //dd($finduser);
             if ($finduser) {
                 session()->put('username', $finduser->username);
+                session()->put('avatar', $finduser->avatar);
                 return redirect()->intended('/');
             } else {
                 $data_google = [
@@ -38,13 +39,15 @@ class LoginGoogleController extends Controller
                     'username' => 'user-google-' . time(), // Nối thêm timestamp
                     'password' => md5('12345678'),
                     'email' => $user->email,
-                    'isActive' => 'y'
+                    'isActive' => 'y',
                 ];
                 $newUser = $this->user->registerAcount($data_google);
                 // Kiểm tra xem $newUser có hợp lệ không
                 if ($newUser && isset($newUser->username)) {
                     // Lưu thông tin người dùng mới vào session
                     session()->put('username', $newUser->username);
+                    session()->put('avatar', $user->avatar);
+                    session()->save();
                     return redirect()->intended('/');
                 } else {
                     // Nếu có lỗi khi đăng ký người dùng mới, xử lý lỗi

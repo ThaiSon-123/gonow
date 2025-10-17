@@ -20,7 +20,7 @@
 <!-- Tour Gallery start -->
 <div class="tour-gallery">
     <div class="container-fluid">
-        <div class="row gap-10 justify-content-center rel">
+        <div class="row gap-10 justify-content-center rel gallery-row">
             <div class="col-lg-4 col-md-6">
                 <div class="gallery-item">
                     <img src="{{ asset('clients/assets/images/gallery-tours/' . $tourDetail->images[0]) }}"
@@ -415,7 +415,8 @@
                     <div class="widget widget-booking" data-aos="fade-up" data-aos-duration="1500"
                         data-aos-offset="50">
                         <h5 class="widget-title">Tour Booking</h5>
-                        <form action="#">
+                        <form action="{{ route('booking', ['id' => $tourDetail->tourId]) }}" method="POST">
+                            @csrf
                             <div class="date mb-25">
                                 <b>Ngày bắt đầu</b>
                                 <input type="text" value="{{ date('d-m-Y', strtotime($tourDetail->startDate)) }}" disabled>
@@ -444,11 +445,8 @@
                                         VND</span>
                                 </li>
                             </ul>
-                            <hr class="mb-25">
-                            <hr>
-                            <h6>Tổng tiền: <span class="price">$74</span></h6>
                             <button type="submit" class="theme-btn style-two w-100 mt-15 mb-5">
-                                <span data-hover="Book Now">Book Now</span>
+                                <span data-hover="Book Now">Đặt Ngay</span>
                                 <i class="fal fa-arrow-right"></i>
                             </button>
                             <div class="text-center">

@@ -1,5 +1,4 @@
 @include('clients.blocks.header')
-
 <div class="login-template">
     <div class="main">
         <!-- Sign in  Form -->

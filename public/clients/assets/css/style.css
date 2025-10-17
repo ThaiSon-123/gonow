@@ -6698,6 +6698,17 @@ h6, .h6, blockquote {
 /*******************************************************/
 /****************** ## Gallery Area ******************/
 /*******************************************************/
+.gallery-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-content: center !important;
+}
+
+.tour-gallery .container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
 .gallery-item {
   margin-bottom: 10px; }
   .gallery-item img {
