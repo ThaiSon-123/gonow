@@ -62,6 +62,9 @@
 /****************************************
 *              PAGE TOURS              *
 * ***************************************/
+.shop-shorter .nice-select::after {
+    margin-top: 5px;
+}
 .div_filter_clear {
     display: flex;
     justify-content: end;

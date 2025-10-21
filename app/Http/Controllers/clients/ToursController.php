@@ -16,29 +16,6 @@ class ToursController extends Controller
         $this->tours = new Tours();
 
     }
-    public function index(Request $request)
-    {
-        $title = 'Tours';
-        $tours = $this->tours->getAllTours(9);
-        $domain = $this->tours->getDomain();
-        // dd($tours);
-        $domainsCount = [
-            'mien_bac' => optional($domain->firstWhere('domain', 'b'))->count,
-            'mien_trung' => optional($domain->firstWhere('domain', 't'))->count,
-            'mien_nam' => optional($domain->firstWhere('domain', 'n'))->count,
-        ];
-
-        //Kiểm tra nếu yêu cầu là AJAX
-        if ($request->ajax()) {
-            return response()->json([
-                'tours' => view('clients.partials.filter-tours', compact('tours'))->render(),
-            ]);
-        }
-        // $toursPopular = $this->tours->toursPopular(2);
-
-        return view('clients.tours', compact('title', 'tours', 'domainsCount'));
-    }
-
     // public function index(Request $request)
     // {
     //     $title = 'Tours';
@@ -51,16 +28,39 @@ class ToursController extends Controller
     //         'mien_nam' => optional($domain->firstWhere('domain', 'n'))->count,
     //     ];
 
-    //     // Kiểm tra nếu yêu cầu là AJAX
+    //     //Kiểm tra nếu yêu cầu là AJAX
     //     if ($request->ajax()) {
     //         return response()->json([
     //             'tours' => view('clients.partials.filter-tours', compact('tours'))->render(),
     //         ]);
     //     }
-    //     $toursPopular = $this->tours->toursPopular(2);
+    //     // $toursPopular = $this->tours->toursPopular(2);
 
-    //     return view('clients.tours', compact('title', 'tours', 'domainsCount','toursPopular'));
+    //     return view('clients.tours', compact('title', 'tours', 'domainsCount'));
     // }
+
+    public function index(Request $request)
+    {
+        $title = 'Tours';
+        $tours = $this->tours->getAllTours(9);
+        $domain = $this->tours->getDomain();
+        // dd($tours);
+        $domainsCount = [
+            'mien_bac' => optional($domain->firstWhere('domain', 'b'))->count,
+            'mien_trung' => optional($domain->firstWhere('domain', 't'))->count,
+            'mien_nam' => optional($domain->firstWhere('domain', 'n'))->count,
+        ];
+
+        // Kiểm tra nếu yêu cầu là AJAX
+        if ($request->ajax()) {
+            return response()->json([
+                'tours' => view('clients.partials.filter-tours', compact('tours'))->render(),
+            ]);
+        }
+        $toursPopular = $this->tours->toursPopular(2);
+
+        return view('clients.tours', compact('title', 'tours', 'domainsCount','toursPopular'));
+    }
     //Xử lý filter tours
     public function filterTours(Request $req)
     {

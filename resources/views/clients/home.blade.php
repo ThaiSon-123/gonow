@@ -107,102 +107,47 @@
                 <div class="col-lg-12">
                     <div class="section-title text-center counter-text-wrap mb-70" data-aos="fade-up"
                         data-aos-duration="1500" data-aos-offset="50">
-                        <h2>Khám phá điểm đến phổ biến</h2>
-                        <p>Một website <span class="count-text plus" data-speed="3000" data-stop="34500">0</span>
-                            trải nghiệm
-                            phổ biến nhất</p>
+                        <h2>Khám phá các điểm đến phổ biến</h2>
+                        <p>Website <span class="count-text plus" data-speed="3000" data-stop="24080">0</span> trải
+                            nghiệm phổ biến nhất</p>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-xl-3 col-md-6">
-                        <div class="destination-item style-two" data-aos="flip-up" data-aos-duration="1500"
-                            data-aos-offset="50">
-                            <div class="image">
+                    @php $count = 0; @endphp
+                    @foreach ($toursPopular as $tour)
+                        @if ($count == 2 || $count == 3)
+                            <!-- Cột thứ 3 và thứ 4 sẽ là col-md-6 -->
+                            <div class="col-md-6 item ">
+                            @else
+                                <!-- Các cột còn lại sẽ là col-xl-3 col-md-6 -->
+                                <div class="col-xl-3 col-md-6 item ">
+                        @endif
+
+                        <div class="destination-item style-two" data-aos-duration="1500" data-aos-offset="50">
+                            <div class="image" style="max-height: 250px">
                                 <a href="#" class="heart"><i class="fas fa-heart"></i></a>
-                                <img src="clients/assets/images/destinations/destination1.jpg" alt="Destination">
+                                <img src="{{ asset('clients/assets/images/gallery-tours/' . $tour->images[0]) }}"
+                                    alt="Destination">
                             </div>
                             <div class="content">
-                                <h6><a href="destination-details.html">Thailand beach</a></h6>
-                                <span class="time">5352+ tours & 856+ Activity</span>
-                                <a href="#" class="more"><i class="fas fa-chevron-right"></i></a>
+                                <h6 class="tour-title"><a
+                                        href="{{ route('tour-detail', ['id' => $tour->tourId]) }}">{{ $tour->destination }}</a>
+                                </h6>
+                                <span class="time">{{ $tour->time }}</span>
+                                <a href="{{ route('tour-detail', ['id' => $tour->tourId]) }}" class="more"><i
+                                        class="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="destination-item style-two" data-aos="flip-up" data-aos-delay="100"
-                            data-aos-duration="1500" data-aos-offset="50">
-                            <div class="image">
-                                <a href="#" class="heart"><i class="fas fa-heart"></i></a>
-                                <img src="clients/assets/images/destinations/destination2.jpg" alt="Destination">
-                            </div>
-                            <div class="content">
-                                <h6><a href="destination-details.html">Parga, Greece</a></h6>
-                                <span class="time">5352+ tours & 856+ Activity</span>
-                                <a href="#" class="more"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="destination-item style-two" data-aos="flip-up" data-aos-delay="200"
-                            data-aos-duration="1500" data-aos-offset="50">
-                            <div class="image">
-                                <a href="#" class="heart"><i class="fas fa-heart"></i></a>
-                                <img src="clients/assets/images/destinations/destination3.jpg" alt="Destination">
-                            </div>
-                            <div class="content">
-                                <h6><a href="destination-details.html">Castellammare del Golfo, Italy</a></h6>
-                                <span class="time">5352+ tours & 856+ Activity</span>
-                                <a href="#" class="more"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="destination-item style-two" data-aos="flip-up" data-aos-duration="1500"
-                            data-aos-offset="50">
-                            <div class="image">
-                                <a href="#" class="heart"><i class="fas fa-heart"></i></a>
-                                <img src="clients/assets/images/destinations/destination4.jpg" alt="Destination">
-                            </div>
-                            <div class="content">
-                                <h6><a href="destination-details.html">Reserve of Canada, Canada</a></h6>
-                                <span class="time">5352+ tours & 856+ Activity</span>
-                                <a href="#" class="more"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="destination-item style-two" data-aos="flip-up" data-aos-delay="100"
-                            data-aos-duration="1500" data-aos-offset="50">
-                            <div class="image">
-                                <a href="#" class="heart"><i class="fas fa-heart"></i></a>
-                                <img src="clients/assets/images/destinations/destination5.jpg" alt="Destination">
-                            </div>
-                            <div class="content">
-                                <h6><a href="destination-details.html">Dubai united states</a></h6>
-                                <span class="time">5352+ tours & 856+ Activity</span>
-                                <a href="#" class="more"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="destination-item style-two" data-aos="flip-up" data-aos-delay="200"
-                            data-aos-duration="1500" data-aos-offset="50">
-                            <div class="image">
-                                <a href="#" class="heart"><i class="fas fa-heart"></i></a>
-                                <img src="clients/assets/images/destinations/destination6.jpg" alt="Destination">
-                            </div>
-                            <div class="content">
-                                <h6><a href="destination-details.html">Milos, Greece</a></h6>
-                                <span class="time">5352+ tours & 856+ Activity</span>
-                                <a href="#" class="more"><i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                </div> <!-- Đóng div col-md-6 hoặc col-xl-3 col-md-6 -->
+
+                @php $count++; @endphp
+                @endforeach
             </div>
         </div>
+    </div>
     </div>
 </section>
 <!-- Popular Destinations Area end -->

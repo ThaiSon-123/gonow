@@ -15,6 +15,8 @@ use App\Http\Controllers\clients\LoginGoogleController;
 use App\Http\Controllers\clients\SearchController;
 use App\Http\Controllers\clients\UserProfileController;
 use App\Http\Controllers\clients\BookingController;
+use App\Http\Controllers\clients\TourBookedController;
+use App\Http\Controllers\clients\MyTourController;
 
 // Route::get('/', function () {
 //     return view('home');
@@ -44,7 +46,6 @@ Route::get('/search', [SearchController::class, 'index'])->name(name: 'search');
 //Route::get('/search-voice-text', [SearchController::class, 'searchTours'])->name('search-voice-text');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-Route::get('/tour-detail/{id?}', [TourDetailController::class, 'index'])->name('tour-detail');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog-detail', [BlogDetailController::class, 'index'])->name('blog-detail');
 
@@ -62,6 +63,18 @@ Route::post('/change-avatar-profile', [UserProfileController::class, 'changeAvat
 Route::post('/booking/{id?}', [BookingController::class, 'index'])->name('booking')->middleware('checkLoginClient');
 Route::post('/create-booking', [BookingController::class, 'createBooking'])->name('create-booking');
 //Route::get('/booking', [BookingController::class, 'handlePaymentMomoCallback'])->name('handlePaymentMomoCallback');
+
+//Tour booked
+Route::get('/tour-booked', [TourBookedController::class, 'index'])->name('tour-booked')->middleware('checkLoginClient');
+Route::post('/cancel-booking', [TourBookedController::class, 'cancelBooking'])->name('cancel-booking');
+
+//My tour
+Route::get('/my-tours', [MyTourController::class, 'index'])->name('my-tours')->middleware('checkLoginClient');
+
+//get Tour detail and handle submit reviews
+Route::get('/tour-detail/{id?}', [TourDetailController::class, 'index'])->name('tour-detail');
+Route::post('/checkBooking', [BookingController::class, 'checkBooking'])->name('checkBooking')->middleware('checkLoginClient');
+Route::post('/reviews', [TourDetailController::class, 'reviews'])->name('reviews')->middleware('checkLoginClient');
 
 // Handle 404 for admin and client
 Route::fallback(function () {
