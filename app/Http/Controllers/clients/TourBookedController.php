@@ -29,14 +29,17 @@ class TourBookedController extends Controller
         // Check if the tour_booked has valid data before accessing properties
         if ($tour_booked && $tour_booked->startDate) {
             $today = Carbon::now();
-
             $startDate = Carbon::parse($tour_booked->startDate);
 
-            // Calculate the difference in days
-            $diffInDays = $startDate->diffInDays($today);
+            // Tính chênh lệch có dấu (nếu ngày tour đã qua thì sẽ âm)
+            $diffInDays = $today->diffInDays($startDate, false);
 
-            // Set 'hide' based on the condition
-            $hide = $diffInDays < 7 ? 'hide' : '';
+            // Ẩn nút nếu còn < 7 ngày hoặc tour đã qua
+            if ($diffInDays < 7 || !$startDate->isFuture()) {
+                $hide = 'hide';
+            } else {
+                $hide = '';
+            }
         } else {
             $hide = '';
         }
@@ -67,10 +70,9 @@ class TourBookedController extends Controller
         $updateBooking = $this->booking->cancelBooking($bookingId);
 
         if ($updateQuantity && $updateBooking) {
-            toastr()->success('Hủy thành công!', 'Thông báo');
-            
-        }else{
-            toastr()->error('Có lỗi xảy ra !', 'Thông báo');
+            toastr()->success('Hủy thành công!', ['title' => 'Thông báo']);
+        } else {
+            toastr()->error('Có lỗi xảy ra !', ['title' => 'Thông báo']);
         }
 
         return redirect()->route('home');

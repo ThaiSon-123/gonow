@@ -82,7 +82,7 @@
                                 <li><i class="far fa-user"></i> {{ $tour->numAdults + $tour->numChildren }} người</li>
                             </ul>
                             <div class="destination-footer">
-                                <span class="price"><span>{{ number_format($tour->totalPrice, 0) }}</span>/vnđ</span>
+                                <span class="price"><span>{{ number_format($tour->totalPrice, 0) }}</span>/VNĐ</span>
                                 @if ($tour->bookingStatus == 'f')
                                     <a href="{{ route('tour-detail', ['id' => $tour->tourId]) }}"
                                         class="theme-btn style-two style-three">

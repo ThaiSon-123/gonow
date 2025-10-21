@@ -106,8 +106,8 @@ class BookingController extends Controller
         session()->put('tourId', $request->tourId);
         
         try {
-            // $amount = $request->amount;
-            $amount = 10000;
+            $amount = $request->amount;
+            //$amount = 10000;
     
             // Các thông tin cần thiết của MoMo
             $endpoint = "https://test-payment.momo.vn/v2/gateway/api/create";
@@ -119,8 +119,8 @@ class BookingController extends Controller
             $requestId = time();
             $orderId = time();
             $extraData = "";
-            $redirectUrl = "http://travela:8000/booking"; // URL chuyển hướng
-            $ipnUrl = "http://travela:8000/booking"; // URL IPN
+            $redirectUrl = "http://gonow:8000/booking"; // URL chuyển hướng
+            $ipnUrl = "http://gonow:8000/booking"; // URL IPN
             $requestType = 'payWithATM'; // Kiểu yêu cầu
     
             // Tạo rawHash và chữ ký theo cách thủ công
@@ -157,7 +157,7 @@ class BookingController extends Controller
     
             // Gửi yêu cầu POST đến MoMo để tạo yêu cầu thanh toán
             $response = Http::post($endpoint, $data);
-    
+            //dd($response);
             if ($response->successful()) {
                 $body = $response->json();
                 if (isset($body['payUrl'])) {

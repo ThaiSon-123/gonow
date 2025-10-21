@@ -4476,7 +4476,7 @@ h6, .h6, blockquote {
     border-radius: 10px; }
     .destination-item .image img {
       height: 250px;
-      width: 100%;
+      width: 400px;
       -webkit-transition: 0.5s;
       -o-transition: 0.5s;
       transition: 0.5s; }

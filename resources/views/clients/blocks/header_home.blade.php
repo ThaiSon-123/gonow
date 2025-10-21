@@ -10,7 +10,7 @@
     <!-- Title -->
     <title>GoNow - {{ $title }}</title>
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" href="clients/assets/images/logos/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('clients/assets/images/logos/favicon.png') }}" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet">

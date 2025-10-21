@@ -17,7 +17,7 @@ use App\Http\Controllers\clients\UserProfileController;
 use App\Http\Controllers\clients\BookingController;
 use App\Http\Controllers\clients\TourBookedController;
 use App\Http\Controllers\clients\MyTourController;
-
+use App\Http\Controllers\clients\PayPalController;
 // Route::get('/', function () {
 //     return view('home');
 // });
@@ -62,7 +62,17 @@ Route::post('/change-avatar-profile', [UserProfileController::class, 'changeAvat
 //Hanlde checkout
 Route::post('/booking/{id?}', [BookingController::class, 'index'])->name('booking')->middleware('checkLoginClient');
 Route::post('/create-booking', [BookingController::class, 'createBooking'])->name('create-booking');
-//Route::get('/booking', [BookingController::class, 'handlePaymentMomoCallback'])->name('handlePaymentMomoCallback');
+Route::get('/booking', [BookingController::class, 'handlePaymentMomoCallback'])->name('handlePaymentMomoCallback');
+
+//Payment with paypal
+Route::get('create-transaction', [PayPalController::class, 'createTransaction'])->name('createTransaction');
+Route::get('process-transaction', [PayPalController::class, 'processTransaction'])->name('processTransaction');
+Route::get('success-transaction', [PayPalController::class, 'successTransaction'])->name('successTransaction');
+Route::get('cancel-transaction', [PayPalController::class, 'cancelTransaction'])->name('cancelTransaction');
+//Route::get('/test-paypal', [PayPalController::class, 'testPaypal']);
+
+//Payment with Momo
+Route::post('/create-momo-payment', [BookingController::class, 'createMomoPayment'])->name('createMomoPayment');
 
 //Tour booked
 Route::get('/tour-booked', [TourBookedController::class, 'index'])->name('tour-booked')->middleware('checkLoginClient');
