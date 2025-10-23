@@ -99,9 +99,9 @@
                         <span class="designation">Travel Guide</span>
                         <div class="social-style-one inner-content">
                             <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/dienne.dev"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@dienne248"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -115,9 +115,9 @@
                         <span class="designation">Senior Guide</span>
                         <div class="social-style-one inner-content">
                             <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/dienne.dev"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@dienne248"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -131,9 +131,9 @@
                         <span class="designation">Travel Guide</span>
                         <div class="social-style-one inner-content">
                             <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/dienne.dev"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@dienne248"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -147,9 +147,9 @@
                         <span class="designation">Travel Guide</span>
                         <div class="social-style-one inner-content">
                             <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/dienne.dev"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@dienne248"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -163,9 +163,9 @@
                         <span class="designation">Co-founder</span>
                         <div class="social-style-one inner-content">
                             <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/dienne.dev"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@dienne248"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -179,9 +179,9 @@
                         <span class="designation">Senior Guide</span>
                         <div class="social-style-one inner-content">
                             <a href="contact.html"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/dienne.dev"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@dienne248"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>

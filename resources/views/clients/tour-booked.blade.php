@@ -44,7 +44,7 @@
             <div class="privacy-section">
                 <p>Bằng cách nhấp chuột vào nút "ĐỒNG Ý" dưới đây, Khách hàng đồng ý rằng các điều kiện điều khoản
                     này sẽ được áp dụng. Vui lòng đọc kỹ điều kiện điều khoản trước khi lựa chọn sử dụng dịch vụ của
-                    Travela.</p>
+                    GoNow.</p>
                 <div class="privacy-checkbox">
                     <input type="checkbox" id="agree" name="agree" checked disabled>
                     <label for="agree">Tôi đã đọc và đồng ý với <a href="#" target="_blank">Điều khoản thanh

@@ -39,7 +39,7 @@
                             <div class="content">
                                 <h5>Cần trợ giúp và hỗ trợ</h5>
                                 <div class="text"><i class="far fa-envelope"></i> <a
-                                        href="mailto:minhdien.dev@gmail.com">minhdien.dev@gmail.com</a></div>
+                                        href="mailto:thaisonpro326@gmail.com">thaisonpro326@gmail.com</a></div>
                             </div>
                         </div>
                     </div>
@@ -69,10 +69,8 @@
                             data-aos-delay="100">
                             <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="content">
-                                <h5>Kí túc xá Việt Hàn</h5>
-                                <div class="text"><i class="fal fa-map-marker-alt"></i> 470 Trần Đại Nghĩa, Ngũ Hành
-                                    Sơn,
-                                    Thành phố Đà Nẵng</div>
+                                <h5>Công ty GoNow</h5>
+                                <div class="text"><i class="fal fa-map-marker-alt"></i>Phú Hòa, Tp. Thủ Dầu Một, Bình Dương, Việt Nam</div>
                             </div>
                         </div>
                     </div>
@@ -90,7 +88,7 @@
         <div class="row align-items-center">
             <div class="col-lg-7">
                 <div class="comment-form bgc-lighter z-1 rel mb-30 rmb-55">
-                    <form id="contactForm" class="contactForm" name="contactForm" 
+                    <form id="contactForm" class="contactForm" name="contactForm" action="{{ route('create-contact') }}"
                         method="post" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
                         @csrf
                         <div class="section-title">
@@ -167,7 +165,7 @@
 <!-- Contact Map Start -->
 <div class="contact-map">
     <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.7796263645037!2d106.67305007513066!3d10.979999755405597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d1085e2b1c37%3A0x73bfa5616464d0ee!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBUaOG7pyBE4bqndSBN4buZdA!5e0!3m2!1svi!2s!4v1759364858833!5m2!1svi!2s" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61349.64701146602!2d108.16542067386848!3d16.047164798501537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219c792252a13%3A0xfc14e3a044436487!2sDa%20Nang%2C%20H%E1%BA%A3i%20Ch%C3%A2u%20District%2C%20Da%20Nang%2C%20Vietnam!5e0!3m2!1sen!2s!4v1729087157388!5m2!1sen!2s"
         style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>

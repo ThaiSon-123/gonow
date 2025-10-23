@@ -23,27 +23,27 @@
         <div class="row gap-10 justify-content-center rel gallery-row">
             <div class="col-lg-4 col-md-6">
                 <div class="gallery-item">
-                    <img src="{{ asset('clients/assets/images/gallery-tours/' . $tourDetail->images[0]) }}"
+                    <img src="{{ asset('admin/assets/images/gallery-tours/' . $tourDetail->images[0]) }}"
                         alt="Destination">
                 </div>
                 <div class="gallery-item">
-                    <img src="{{ asset('clients/assets/images/gallery-tours/' . $tourDetail->images[1]) }}"
+                    <img src="{{ asset('admin/assets/images/gallery-tours/' . $tourDetail->images[1]) }}"
                         alt="Destination">
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="gallery-item gallery-between">
-                    <img src="{{ asset('clients/assets/images/gallery-tours/' . $tourDetail->images[2]) }}"
+                    <img src="{{ asset('admin/assets/images/gallery-tours/' . $tourDetail->images[2]) }}"
                         alt="Destination">
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="gallery-item">
-                    <img src="{{ asset('clients/assets/images/gallery-tours/' . $tourDetail->images[3]) }}"
+                    <img src="{{ asset('admin/assets/images/gallery-tours/' . $tourDetail->images[3]) }}"
                         alt="Destination">
                 </div>
                 <div class="gallery-item">
-                    <img src="{{ asset('clients/assets/images/gallery-tours/' . $tourDetail->images[4]) }}"
+                    <img src="{{ asset('admin/assets/images/gallery-tours/' . $tourDetail->images[4]) }}"
                         alt="Destination">
                 </div>
             </div>
