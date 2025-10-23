@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\clients;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
 use App\Models\clients\Tours;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -118,17 +121,17 @@ class ToursController extends Controller
         //dd($conditions);
         $tours = $this->tours->filterTours($conditions, $sorting);
         
-        // // If not paginated, simulate pagination
-        // if (!$tours instanceof \Illuminate\Pagination\LengthAwarePaginator) {
-        //     // Create a fake paginator (pagination for non-paginated collection)
-        //     $tours = new \Illuminate\Pagination\LengthAwarePaginator(
-        //         $tours, // Collection
-        //         count($tours), // Total items
-        //         9, // Per page
-        //         1, // Current page
-        //         ['path' => url()->current()] // Path for pagination
-        //     );
-        // }
+        // If not paginated, simulate pagination
+        if (!$tours instanceof \Illuminate\Pagination\LengthAwarePaginator) {
+            // Create a fake paginator (pagination for non-paginated collection)
+            $tours = new \Illuminate\Pagination\LengthAwarePaginator(
+                $tours, // Collection
+                count($tours), // Total items
+                9, // Per page
+                1, // Current page
+                ['path' => url()->current()] // Path for pagination
+            );
+        }
          return view('clients.partials.filter-tours', compact('tours'));
 
     }

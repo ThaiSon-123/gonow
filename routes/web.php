@@ -18,6 +18,7 @@ use App\Http\Controllers\clients\BookingController;
 use App\Http\Controllers\clients\TourBookedController;
 use App\Http\Controllers\clients\MyTourController;
 use App\Http\Controllers\clients\PayPalController;
+
 // Route::get('/', function () {
 //     return view('home');
 // });
@@ -85,6 +86,11 @@ Route::get('/my-tours', [MyTourController::class, 'index'])->name('my-tours')->m
 Route::get('/tour-detail/{id?}', [TourDetailController::class, 'index'])->name('tour-detail');
 Route::post('/checkBooking', [BookingController::class, 'checkBooking'])->name('checkBooking')->middleware('checkLoginClient');
 Route::post('/reviews', [TourDetailController::class, 'reviews'])->name('reviews')->middleware('checkLoginClient');
+
+//Search 
+Route::get('/search', [SearchController::class, 'index'])->name('search');
+Route::get('/search-text', [SearchController::class, 'searchTours'])->name('search-text');
+
 
 // Handle 404 for admin and client
 Route::fallback(function () {
